@@ -16,3 +16,14 @@ same([1, 2, 3], [4, 1, 9]); // true
 same([1, 2, 3], [1, 9]); // false
 same([1, 2, 1], [4, 4, 1]); // false
 ```
+
+> 두 문자열이 주어졌을 때, 두 번째 문자열이 첫 번째 문자열의 애너그램인지 확인하는 validAnagram 함수를 작성하라.
+> 에너그램은 다른 글자를 재배열하여 형성된 단어이다.
+
+```javascript
+validAnagram('', ''); // true
+validAnagram('aaz', 'zza'); // false
+validAnagram('anagram', 'nagaram'); // true
+validAnagram('rat', 'car'); // false
+validAnagram('awesome', 'awesom'); // false
+```
