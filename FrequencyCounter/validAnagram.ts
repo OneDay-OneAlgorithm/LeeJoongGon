@@ -16,6 +16,10 @@
 // 첫 번째 객체를 정상적으로 순회했다면, true 반환
 
 const validAnagram = (first: string, second: string): boolean => {
+  if (first.length !== second.length) {
+    return false;
+  }
+
   const firstMap = new Map();
   const secondMap = new Map();
 
