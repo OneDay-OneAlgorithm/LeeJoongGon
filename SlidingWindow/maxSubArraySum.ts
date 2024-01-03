@@ -34,9 +34,7 @@ const maxSubArraySum = (array: number[], n: number) => {
     right += 1;
 
     sum = sum - array[left - 1] + array[right];
-    if (sum > max) {
-      max = sum;
-    }
+    max = Math.max(max, sum);
   }
 
   return max;
