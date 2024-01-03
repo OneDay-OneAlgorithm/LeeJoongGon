@@ -8,7 +8,7 @@
 | ---- | ----------------------------------------------------------------------------------------------------------------- | -------------- |
 | 1/1  | [[Frequency Counter]](./FrequencyCounter/FrequecyCounter.md) [same()](./FrequencyCounter/same.ts)                 | O              |
 | 1/2  | [[Frequency Counter]](./FrequencyCounter/FrequecyCounter.md) [validAnagram()](./FrequencyCounter/validAnagram.ts) | O              |
-| 1/3  |                                                                                                                   |                |
+| 1/3  | [[Multiple Pointer]](./MultiplePointer/MultiplePointer.md) [sumZero()](./MultiplePointer/sumZero.ts)              | O              |
 | 1/4  |                                                                                                                   |                |
 | 1/5  |                                                                                                                   |                |
 | 1/6  |                                                                                                                   |                |
