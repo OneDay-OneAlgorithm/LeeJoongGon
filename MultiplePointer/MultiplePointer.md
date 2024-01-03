@@ -19,3 +19,13 @@ sumZero([-3, -2, -1, 0, 1, 2, 3]); // [-3, 3]
 sumZero([-2, 0, 1, 3]); // undefined
 sumZero([1, 2, 3]); // undefined
 ```
+
+> 정렬된 정수 배열을 입력으로 받아 배열의 고유한 값의 개수를 세는 `countUniqueValues`라는 함수를 작성하라. <br/>
+> 배열에는 음수가 있을 수 있지만 항상 정렬되어있다.
+
+```javascript
+countUniqueValues([1, 1, 1, 1, 1, 2]); // 2
+countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]); // 7
+countUniqueValues([]); // 0
+countUniqueValues([-2, -1, -1, 0, 1]); // 4
+```
