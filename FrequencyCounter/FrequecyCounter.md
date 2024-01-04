@@ -36,3 +36,11 @@ sameFrequency(34, 14); // false
 sameFrequency(3589578, 5879385); // true
 sameFrequency(22, 222); // false
 ```
+
+> 가변적인 수의 인자를 입력으로 받아 전달된 인자 중 중복이 있는지 확인하는 `areThereDuplicates`라는 함수를 작성하라.
+
+```javascript
+areThereDuplicates(1, 2, 3); // false
+areThereDuplicates(1, 2, 2); // true
+areThereDuplicates('a', 'b', 'c', 'a'); // true
+```
