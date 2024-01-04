@@ -38,3 +38,13 @@ averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8); // true
 averagePair([-1, 0, 3, 4, 5, 6], 4.1); // false
 averagePair([], 4); // false
 ```
+
+> 두 문자열을 받아 첫 번째 문자열의 문자가 두 번째 문자열의 문자의 일부에 포함되는지 확인하는 `isSubsequence`라는 함수를 작성하라. <br/>
+> 즉, 이 함수는 첫 번째 문자열의 문자가 순서가 바뀌지 않고 두 번째 문자열의 어딘가에 나타나는지 확인해야 한다.
+
+```javascript
+isSubsequence('hello', 'hello world'); // true
+isSubsequence('sing', 'sting'); // true
+isSubsequence('abc', 'abracadabra'); // true
+isSubsequence('abc', 'acb'); // false (order matters)
+```
