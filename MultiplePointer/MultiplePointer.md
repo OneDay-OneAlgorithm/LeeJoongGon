@@ -29,3 +29,12 @@ countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]); // 7
 countUniqueValues([]); // 0
 countUniqueValues([-2, -1, -1, 0, 1]); // 4
 ```
+
+> 정렬된 정수 배열과 목표 평균이 주어졌을 때, 배열에 목표 평균과 같은 값의 쌍이 있는지 확인하는 `averagePair`라는 함수를 작성하라. 목표 평균과 일치하는 쌍이 두 개 이상 있을 수 있다.
+
+```javascript
+averagePair([1, 2, 3], 2.5); // true
+averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8); // true
+averagePair([-1, 0, 3, 4, 5, 6], 4.1); // false
+averagePair([], 4); // false
+```
