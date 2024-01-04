@@ -27,3 +27,12 @@ validAnagram('anagram', 'nagaram'); // true
 validAnagram('rat', 'car'); // false
 validAnagram('awesome', 'awesom'); // false
 ```
+
+> 두 양의 정수가 주어졌을 때, 두 숫자의 자릿수가 같은 빈도를 갖는지 확인하는 sameFrequency 함수를 작성하라.
+
+```javascript
+sameFrequency(182, 281); // true
+sameFrequency(34, 14); // false
+sameFrequency(3589578, 5879385); // true
+sameFrequency(22, 222); // false
+```
