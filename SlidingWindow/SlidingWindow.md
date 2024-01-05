@@ -33,3 +33,15 @@ minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 55); // 5
 minSubArrayLen([4, 3, 3, 8, 1, 2, 3], 11); // 2
 minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 95); // 0
 ```
+
+> 문자열을 받아 고유한 문자만 포함하는 가장 긴 하위 문자열의 길이를 반환하는 `findLongestSubString`이라는 함수를 작성하라.
+
+```javascript
+findLongestSubString(''); // 0
+findLongestSubString('rithmschool'); // 7
+findLongestSubString('thisisawesome'); // 6
+findLongestSubString('thecatinthehat'); // 7
+findLongestSubString('bbbbbb'); // 1
+findLongestSubString('longestsubstring'); // 8
+findLongestSubString('thisishowwedoit'); // 6
+```
