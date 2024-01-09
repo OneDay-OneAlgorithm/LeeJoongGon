@@ -14,6 +14,8 @@
 /// `array`의 첫번째 원소가 배열이라면 첫번째 원소로 helper 함수를 재귀호출
 /// `array`의 첫번째 원소가 배열이 아니라면 `flattened` 배열에 push
 /// `array`의 첫번째 원소를 제외한 배열로 helper 함수를 재귀호출
+// 원본 배열로 `helper` 함수를 호출
+// `flattened` 배열 반환
 
 const flatten = (input: any[]): any[] => {
   const flattened: any[] = [];
