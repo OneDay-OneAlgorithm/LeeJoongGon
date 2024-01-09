@@ -17,10 +17,10 @@
 // 원본 배열로 `helper` 함수를 호출
 // `flattened` 배열 반환
 
-const flatten = (input: any[]): any[] => {
-  const flattened: any[] = [];
+const flatten = (input: unknown[]): unknown[] => {
+  const flattened: unknown[] = [];
 
-  const helper = (array: any[]): void => {
+  const helper = (array: unknown[]): void => {
     if (array.length === 0) {
       return;
     }

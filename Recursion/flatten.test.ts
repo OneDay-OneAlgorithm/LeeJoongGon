@@ -9,8 +9,8 @@ describe('flatten', () => {
   });
 
   it('빈 배열이 입력으로 들어올 경우 빈 배열 반환', () => {
-    const input: any[] = [];
-    const expectedOutput: any[] = [];
+    const input: unknown[] = [];
+    const expectedOutput: unknown[] = [];
 
     expect(flatten(input)).toEqual(expectedOutput);
   });

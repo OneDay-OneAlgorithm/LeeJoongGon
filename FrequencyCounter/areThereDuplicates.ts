@@ -15,7 +15,7 @@
 /// 요소가 객체에 없다면 요소를 객체에 저장
 // 정상적으로 배열을 순회했다면 false 반환
 
-const areThereDuplicates = (...args: any[]): boolean => {
+const areThereDuplicates = (...args: unknown[]): boolean => {
   const map = new Map();
 
   return args.some((value) => {

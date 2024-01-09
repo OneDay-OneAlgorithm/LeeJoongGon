@@ -12,8 +12,8 @@
 // `array`의 첫 번째 요소를 인자로 콜백 함수를 호출한 결과가 `true`라면 `true` 반환
 // `array`의 첫 번째 요소를 인자로 콜백 함수를 호출한 결과가 `false`라면 첫 번째 요소를 제외한 배열로 함수를 재귀호출한 결과를 반환
 
-type CallbackFn = (element: any) => boolean;
-type SomeRecursiveFn = (array: any[], callback: CallbackFn) => boolean;
+type CallbackFn<T> = (element: T) => boolean;
+type SomeRecursiveFn = <T>(array: T[], callback: CallbackFn<T>) => boolean;
 
 const someRecursive: SomeRecursiveFn = (array, callback) => {
   if (array.length === 0) {
