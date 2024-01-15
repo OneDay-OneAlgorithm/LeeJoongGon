@@ -1,11 +1,13 @@
 import bubbleSort from './bubbleSort';
 import bubbleSort2 from './bubbleSort2';
 import selectionSort from './selectionSort';
+import insertionSort from './insertionSort';
 
 const functionsToTest = [
   { name: 'bubbleSort', func: bubbleSort },
   { name: 'bubbleSort2', func: bubbleSort2 },
   { name: 'selectionSort', func: selectionSort },
+  { name: 'insertionSort', func: insertionSort },
 ];
 
 describe.each(functionsToTest)('$name', ({ func }) => {
