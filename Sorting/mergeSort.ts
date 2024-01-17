@@ -1,3 +1,17 @@
+// Problem
+// 배열의 원소를 오름차순으로 정렬하는 `insertionSort` 함수 작성
+
+// Input
+// 임의의 정수 배열 `array`
+
+// Output
+// 베열 안 정수를 오름차순으로 정렬한 배열
+
+// 배열의 길이가 2보다 작을 경우 해당 배열을 반환 (base case)
+// 배열의 왼쪽 반절에 해당하는 배열로 함수를 재귀호출한 결과를 `leftHalf` 변수에 저장
+// 배열의 오른쪽 반절에 해당하는 배열로 함수를 재귀호출한 결과를 `rightHalf` 변수에 저장
+// `leftHalf`, `rightHalf` 배열로 `merge` 함수를 호출한 결과를 반환
+
 const merge = (array1: number[], array2: number[]): number[] => {
   const merged: number[] = [];
 
@@ -18,13 +32,13 @@ const merge = (array1: number[], array2: number[]): number[] => {
   }
 
   if (pointer1 < array1.length) {
-    for (let i = 0; i < array1.length; i++) {
+    for (let i = pointer1; i < array1.length; i++) {
       merged.push(array1[i]);
     }
   }
 
   if (pointer2 < array2.length) {
-    for (let i = 0; i < array2.length; i++) {
+    for (let i = pointer2; i < array2.length; i++) {
       merged.push(array2[i]);
     }
   }
@@ -44,4 +58,4 @@ const mergeSort = (array: number[]): number[] => {
   return merge(leftHalf, rightHalf);
 };
 
-export default mergeSort;
+export { merge, mergeSort };
