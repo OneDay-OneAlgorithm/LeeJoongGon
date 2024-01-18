@@ -4,6 +4,7 @@ import selectionSort from './selectionSort';
 import insertionSort from './insertionSort';
 import { mergeSort } from './mergeSort';
 import { quickSort } from './quickSort';
+import radixSort from './radixSort';
 
 const functionsToTest = [
   { name: 'bubbleSort', func: bubbleSort },
@@ -12,6 +13,7 @@ const functionsToTest = [
   { name: 'insertionSort', func: insertionSort },
   { name: 'mergeSort', func: mergeSort },
   { name: 'quickSort', func: quickSort },
+  { name: 'radixSort', func: radixSort },
 ];
 
 describe.each(functionsToTest)('$name', ({ func }) => {
