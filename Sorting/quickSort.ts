@@ -1,5 +1,5 @@
 // Problem
-// 배열의 원소를 오름차순으로 정렬하는 `insertionSort` 함수 작성
+// 배열의 원소를 오름차순으로 정렬하는 `quickSort` 함수 작성
 
 // Input
 // 임의의 정수 배열 `array`, 배열의 시작 인덱스 `start`, 배열의 끝 인덱스 `end`

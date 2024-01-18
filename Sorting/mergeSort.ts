@@ -1,5 +1,5 @@
 // Problem
-// 배열의 원소를 오름차순으로 정렬하는 `insertionSort` 함수 작성
+// 배열의 원소를 오름차순으로 정렬하는 `mergeSort` 함수 작성
 
 // Input
 // 임의의 정수 배열 `array`
