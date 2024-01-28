@@ -1,6 +1,5 @@
 # Problem-Solving
 
-## 1일 1알고리즘 표 👩🏻‍💻
 ![](https://api.mosu.blog/Oneday-OneAlgorithm/LeeJoongGon?since=2024-01-01&until=2024-02-29)
 
 ## 1월
