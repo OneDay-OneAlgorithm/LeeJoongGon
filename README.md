@@ -1,5 +1,5 @@
 # Problem-Solving
-![](https://api.mosu.blog/2wndrhs/Oneday-OneAlgorithm/LeeJoongGon)
+![](https://api.mosu.blog/Oneday-OneAlgorithm/LeeJoongGon)
 
 ## 1일 1알고리즘 표 👩🏻‍💻
 
