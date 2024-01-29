@@ -22,12 +22,37 @@ class SinglyLinkedList {
       this.tail = this.head;
     } else {
       this.tail.next = node;
-      this.tail = node;
+      this.tail = this.tail.next;
     }
 
     this.length += 1;
 
     return this;
+  }
+
+  // removing a node from the end of the linked list
+  pop(): Node | undefined {
+    if (!this.head) {
+      return undefined;
+    }
+
+    let current = this.head;
+    let newTail = current;
+    while (current.next !== null) {
+      newTail = current;
+      current = current.next;
+    }
+
+    this.tail = newTail;
+    this.tail.next = null;
+
+    this.length -= 1;
+    if (this.length === 0) {
+      this.head = null;
+      this.tail = null;
+    }
+
+    return current;
   }
 }
 
