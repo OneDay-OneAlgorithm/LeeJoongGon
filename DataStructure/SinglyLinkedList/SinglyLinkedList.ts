@@ -88,6 +88,22 @@ class SinglyLinkedList {
 
     return this;
   }
+
+  // retrieving a node in a linked list by its position
+  get(index: number): Node | null {
+    if (index < 0 || index >= this.length) {
+      return null;
+    }
+
+    let current = this.head;
+    let counter = 0;
+    while (counter !== index) {
+      current = current?.next!;
+      counter += 1;
+    }
+
+    return current;
+  }
 }
 
 export default SinglyLinkedList;
