@@ -124,4 +124,34 @@ describe('SinglyLinkedList', () => {
       expect(nodeAtIndexNegative).toBeNull();
     });
   });
+
+  describe('set', () => {
+    it('인덱스에 해당하는 노드의 데이터를 변경', () => {
+      const linkedList = new SinglyLinkedList();
+
+      linkedList.push(1);
+      linkedList.push(2);
+      linkedList.push(3);
+
+      const result = linkedList.set(1, 'updated');
+      expect(result).toBe(true);
+      expect(linkedList.get(1)?.data).toBe('updated');
+    });
+
+    it('인덱스가 범위를 벗어날 때는 false를 반환', () => {
+      const linkedList = new SinglyLinkedList();
+
+      linkedList.push(1);
+      linkedList.push(2);
+      linkedList.push(3);
+
+      const result = linkedList.set(3, 'updated');
+      expect(result).toBe(false);
+      expect(linkedList.get(3)).toBeNull();
+
+      const resultNegative = linkedList.set(-1, 'updated');
+      expect(resultNegative).toBe(false);
+      expect(linkedList.get(-1)).toBeNull();
+    });
+  });
 });
