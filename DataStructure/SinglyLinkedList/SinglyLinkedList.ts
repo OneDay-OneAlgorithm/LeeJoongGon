@@ -166,6 +166,30 @@ class SinglyLinkedList {
 
     return removed;
   }
+
+  // reversing the linked list in place
+  reverse(): SinglyLinkedList {
+    // swap head and tail
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+
+    let prev: Node | null = null;
+    let next: Node | null = null;
+
+    for (let i = 0; i < this.length; i += 1) {
+      // next is the next node after node
+      next = node!.next;
+      // node.next is the previous node
+      node!.next = prev;
+      // prev is the current node
+      prev = node;
+      // node is the next node
+      node = next;
+    }
+
+    return this;
+  }
 }
 
 export default SinglyLinkedList;
