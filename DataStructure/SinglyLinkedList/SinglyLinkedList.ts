@@ -54,6 +54,23 @@ class SinglyLinkedList {
 
     return current;
   }
+
+  // removing a node from the beginning of the linked list
+  shift(): Node | undefined {
+    if (!this.head) {
+      return undefined;
+    }
+
+    const currentHead = this.head;
+    this.head = currentHead.next;
+
+    this.length -= 1;
+    if (this.length === 0) {
+      this.tail = null;
+    }
+
+    return currentHead;
+  }
 }
 
 export default SinglyLinkedList;
