@@ -1,4 +1,3 @@
-import Node from './Node';
 import SinglyLinkedList from './SinglyLinkedList';
 
 describe('SinglyLinkedList', () => {
@@ -240,6 +239,42 @@ describe('SinglyLinkedList', () => {
       expect(linkedList.head?.data).toBe(2);
       expect(linkedList.tail?.data).toBe(3);
       expect(linkedList.length).toBe(2);
+    });
+  });
+
+  describe('reverse', () => {
+    it('연결 리스트의 순서를 뒤집음', () => {
+      const linkedList = new SinglyLinkedList();
+
+      linkedList.push(1).push(2).push(3);
+
+      linkedList.reverse();
+
+      expect(linkedList.head?.data).toBe(3);
+      expect(linkedList.tail?.data).toBe(1);
+      expect(linkedList.length).toBe(3);
+    });
+
+    it('빈 연결 리스트를 뒤집어도 변화가 없음', () => {
+      const linkedList = new SinglyLinkedList();
+
+      linkedList.reverse();
+
+      expect(linkedList.head).toBeNull();
+      expect(linkedList.tail).toBeNull();
+      expect(linkedList.length).toBe(0);
+    });
+
+    it('단일 노드로 이루어진 연결 리스트를 뒤집어도 변화가 없음', () => {
+      const linkedList = new SinglyLinkedList();
+
+      linkedList.push(1);
+
+      linkedList.reverse();
+
+      expect(linkedList.head?.data).toBe(1);
+      expect(linkedList.tail?.data).toBe(1);
+      expect(linkedList.length).toBe(1);
     });
   });
 });
