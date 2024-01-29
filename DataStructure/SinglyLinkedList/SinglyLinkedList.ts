@@ -116,6 +116,56 @@ class SinglyLinkedList {
 
     return true;
   }
+
+  // adding a node to the linked list at a specific position
+  insert(index: number, data: number | string): boolean {
+    if (index < 0 || index > this.length) {
+      return false;
+    }
+
+    if (index === this.length) {
+      this.push(data);
+      return true;
+    }
+
+    if (index === 0) {
+      this.unshift(data);
+      return true;
+    }
+
+    const node = new Node(data);
+    const prev = this.get(index - 1)!;
+
+    node.next = prev.next;
+    prev.next = node;
+
+    this.length += 1;
+
+    return true;
+  }
+
+  // removing a node from the linked list at a specific position
+  remove(index: number): Node | undefined {
+    if (index < 0 || index >= this.length) {
+      return undefined;
+    }
+
+    if (index === this.length - 1) {
+      return this.pop();
+    }
+
+    if (index === 0) {
+      return this.shift();
+    }
+
+    const prev = this.get(index - 1)!;
+    const removed = prev.next!;
+
+    prev.next = removed.next;
+    this.length -= 1;
+
+    return removed;
+  }
 }
 
 export default SinglyLinkedList;
