@@ -94,4 +94,34 @@ describe('SinglyLinkedList', () => {
       expect(linkedList.length).toBe(3);
     });
   });
+
+  describe('get', () => {
+    it('인덱스에 해당하는 노드를 반환', () => {
+      const linkedList = new SinglyLinkedList();
+
+      linkedList.push(1);
+      linkedList.push(2);
+      linkedList.push(3);
+
+      const nodeAtIndex1 = linkedList.get(1);
+      expect(nodeAtIndex1?.data).toBe(2);
+
+      const nodeAtIndex2 = linkedList.get(2);
+      expect(nodeAtIndex2?.data).toBe(3);
+    });
+
+    it('인덱스가 범위를 벗어날 때는 null을 반환', () => {
+      const linkedList = new SinglyLinkedList();
+
+      linkedList.push(1);
+      linkedList.push(2);
+      linkedList.push(3);
+
+      const nodeAtIndex3 = linkedList.get(3);
+      expect(nodeAtIndex3).toBeNull();
+
+      const nodeAtIndexNegative = linkedList.get(-1);
+      expect(nodeAtIndexNegative).toBeNull();
+    });
+  });
 });
