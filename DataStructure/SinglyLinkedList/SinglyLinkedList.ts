@@ -104,6 +104,18 @@ class SinglyLinkedList {
 
     return current;
   }
+
+  // changing the data of a node based on its position in the linked list
+  set(index: number, data: number | string): boolean {
+    const node = this.get(index);
+    if (!node) {
+      return false;
+    }
+
+    node.data = data;
+
+    return true;
+  }
 }
 
 export default SinglyLinkedList;
