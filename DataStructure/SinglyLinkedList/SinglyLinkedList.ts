@@ -71,6 +71,23 @@ class SinglyLinkedList {
 
     return currentHead;
   }
+
+  // adding a node to the beginning of the linked list
+  unshift(data: number | string): SinglyLinkedList {
+    const node = new Node(data);
+
+    if (!this.head) {
+      this.head = node;
+      this.tail = this.head;
+    } else {
+      node.next = this.head;
+      this.head = node;
+    }
+
+    this.length += 1;
+
+    return this;
+  }
 }
 
 export default SinglyLinkedList;
