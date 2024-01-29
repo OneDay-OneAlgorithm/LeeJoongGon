@@ -73,4 +73,25 @@ describe('SinglyLinkedList', () => {
       expect(linkedList.length).toBe(0);
     });
   });
+
+  describe('unshift', () => {
+    it('연결 리스트의 첫 번째에 새로운 노드를 추가', () => {
+      const linkedList = new SinglyLinkedList();
+
+      linkedList.unshift(1);
+      expect(linkedList.head?.data).toBe(1);
+      expect(linkedList.tail?.data).toBe(1);
+      expect(linkedList.length).toBe(1);
+
+      linkedList.unshift(2);
+      expect(linkedList.head?.data).toBe(2);
+      expect(linkedList.tail?.data).toBe(1);
+      expect(linkedList.length).toBe(2);
+
+      linkedList.unshift(3);
+      expect(linkedList.head?.data).toBe(3);
+      expect(linkedList.tail?.data).toBe(1);
+      expect(linkedList.length).toBe(3);
+    });
+  });
 });
