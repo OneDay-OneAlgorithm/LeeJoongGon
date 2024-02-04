@@ -122,4 +122,27 @@ describe('DoubleLinkedList', () => {
       expect(linkedList.set(3, 4)).toBeFalsy();
     });
   });
+
+  describe('insert', () => {
+    it('특정 인덱스에 노드를 추가', () => {
+      const linkedList = new DoublyLinkedList();
+
+      linkedList.push(1).push(2).push(3);
+
+      linkedList.insert(1, 4);
+
+      expect(linkedList.get(1)?.data).toBe(4);
+      expect(linkedList.get(2)?.data).toBe(2);
+      expect(linkedList.length).toBe(4);
+    });
+
+    it('인덱스가 범위를 벗어날 경우에는 false 반환', () => {
+      const linkedList = new DoublyLinkedList();
+
+      linkedList.push(1).push(2).push(3);
+
+      expect(linkedList.insert(-1, 4)).toBeFalsy();
+      expect(linkedList.insert(4, 4)).toBeFalsy();
+    });
+  });
 });
