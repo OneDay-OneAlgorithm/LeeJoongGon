@@ -30,6 +30,27 @@ class DoublyLinkedList {
 
     return this;
   }
+
+  // 연결 리스트 끝에 있는 노드 제거
+  pop(): Node | undefined {
+    if (!this.head || !this.tail) {
+      return undefined;
+    }
+
+    const poppedNode = this.tail;
+
+    if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      this.tail = poppedNode.prev!;
+      this.tail.next = null;
+    }
+
+    this.length -= 1;
+
+    return poppedNode;
+  }
 }
 
 export default DoublyLinkedList;
