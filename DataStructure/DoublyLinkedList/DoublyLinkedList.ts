@@ -135,6 +135,36 @@ class DoublyLinkedList {
 
     return true;
   }
+
+  // 연결 리스트에서 특정 인덱스에 노드 추가
+  insert(index: number, data: number | string): boolean {
+    if (index < 0 || index > this.length) {
+      return false;
+    }
+
+    if (index === this.length) {
+      this.push(data);
+      return true;
+    }
+
+    if (index === 0) {
+      this.unshift(data);
+      return true;
+    }
+
+    const newNode = new Node(data);
+    const prevNode = this.get(index - 1)!;
+    const nextNode = prevNode.next!;
+
+    prevNode.next = newNode;
+    newNode.prev = prevNode;
+    newNode.next = nextNode;
+    nextNode.prev = newNode;
+
+    this.length += 1;
+
+    return true;
+  }
 }
 
 export default DoublyLinkedList;
