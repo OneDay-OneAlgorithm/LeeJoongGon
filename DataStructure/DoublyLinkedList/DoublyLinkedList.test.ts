@@ -101,4 +101,25 @@ describe('DoubleLinkedList', () => {
       expect(linkedList.get(3)).toBeNull();
     });
   });
+
+  describe('set', () => {
+    it('특정 인덱스의 노드의 데이터를 변경', () => {
+      const linkedList = new DoublyLinkedList();
+
+      linkedList.push(1).push(2).push(3);
+
+      const result = linkedList.set(1, 4);
+      expect(result).toBe(true);
+      expect(linkedList.get(1)?.data).toBe(4);
+    });
+
+    it('인덱스가 범위를 벗어날 경우에는 false 반환', () => {
+      const linkedList = new DoublyLinkedList();
+
+      linkedList.push(1).push(2).push(3);
+
+      expect(linkedList.set(-1, 4)).toBeFalsy();
+      expect(linkedList.set(3, 4)).toBeFalsy();
+    });
+  });
 });
