@@ -123,6 +123,18 @@ class DoublyLinkedList {
 
     return current;
   }
+
+  // 연결 리스트에서 특정 인덱스의 노드의 데이터를 변경
+  set(index: number, data: number | string): boolean {
+    const node = this.get(index);
+    if (!node) {
+      return false;
+    }
+
+    node.data = data;
+
+    return true;
+  }
 }
 
 export default DoublyLinkedList;
