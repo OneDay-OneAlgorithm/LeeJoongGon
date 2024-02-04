@@ -74,6 +74,24 @@ class DoublyLinkedList {
 
     return shiftedNode;
   }
+
+  // 연결 리스트 앞에 노드 추가
+  unshift(data: number | string): DoublyLinkedList {
+    const newNode = new Node(data);
+
+    if (!this.head || !this.tail) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.head.prev = newNode;
+      newNode.next = this.head;
+      this.head = this.head.prev;
+    }
+
+    this.length += 1;
+
+    return this;
+  }
 }
 
 export default DoublyLinkedList;
