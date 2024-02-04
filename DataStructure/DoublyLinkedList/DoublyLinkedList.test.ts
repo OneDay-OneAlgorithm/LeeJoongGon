@@ -145,4 +145,26 @@ describe('DoubleLinkedList', () => {
       expect(linkedList.insert(4, 4)).toBeFalsy();
     });
   });
+
+  describe('remove', () => {
+    it('특정 인덱스의 노드를 제거', () => {
+      const linkedList = new DoublyLinkedList();
+
+      linkedList.push(1).push(2).push(3);
+
+      const removedNode = linkedList.remove(1);
+      expect(removedNode?.data).toBe(2);
+      expect(linkedList.get(1)?.data).toBe(3);
+      expect(linkedList.length).toBe(2);
+    });
+
+    it('인덱스가 범위를 벗어날 경우에는 undefined 반환', () => {
+      const linkedList = new DoublyLinkedList();
+
+      linkedList.push(1).push(2).push(3);
+
+      expect(linkedList.remove(-1)).toBeUndefined();
+      expect(linkedList.remove(3)).toBeUndefined();
+    });
+  });
 });
