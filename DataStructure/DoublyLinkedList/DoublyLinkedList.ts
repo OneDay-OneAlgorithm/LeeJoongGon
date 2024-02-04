@@ -92,6 +92,37 @@ class DoublyLinkedList {
 
     return this;
   }
+
+  // 연결 리스트에서 특정 인덱스의 노드 반환
+  get(index: number): Node | null {
+    if (index < 0 || index >= this.length) {
+      return null;
+    }
+
+    const middle = Math.floor(this.length / 2);
+    let current;
+    let counter;
+
+    if (index <= middle) {
+      current = this.head;
+      counter = 0;
+
+      while (counter !== index) {
+        current = current!.next;
+        counter += 1;
+      }
+    } else {
+      current = this.tail;
+      counter = this.length - 1;
+
+      while (counter !== index) {
+        current = current!.prev;
+        counter -= 1;
+      }
+    }
+
+    return current;
+  }
 }
 
 export default DoublyLinkedList;
