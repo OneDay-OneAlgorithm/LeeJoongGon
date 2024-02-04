@@ -165,6 +165,34 @@ class DoublyLinkedList {
 
     return true;
   }
+
+  // 연결 리스트에서 특정 인덱스의 노드 제거
+  remove(index: number): Node | undefined {
+    if (index < 0 || index >= this.length) {
+      return undefined;
+    }
+
+    if (index === this.length - 1) {
+      return this.pop();
+    }
+
+    if (index === 0) {
+      return this.shift();
+    }
+
+    const removedNode = this.get(index)!;
+    const prevNode = removedNode.prev!;
+    const nextNode = removedNode.next!;
+
+    prevNode.next = nextNode;
+    nextNode.prev = prevNode;
+    removedNode.next = null;
+    removedNode.prev = null;
+
+    this.length -= 1;
+
+    return removedNode;
+  }
 }
 
 export default DoublyLinkedList;
