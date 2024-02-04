@@ -66,4 +66,18 @@ describe('DoubleLinkedList', () => {
       expect(linkedList.length).toBe(0);
     });
   });
+
+  describe('unshift', () => {
+    it('연결 리스트의 앞에 노드를 추가', () => {
+      const linkedList = new DoublyLinkedList();
+
+      linkedList.unshift(3).unshift(2).unshift(1);
+
+      expect(linkedList.head?.data).toBe(1);
+      expect(linkedList.head?.next?.data).toBe(2);
+      expect(linkedList.tail?.data).toBe(3);
+      expect(linkedList.tail?.prev?.data).toBe(2);
+      expect(linkedList.length).toBe(3);
+    });
+  });
 });
