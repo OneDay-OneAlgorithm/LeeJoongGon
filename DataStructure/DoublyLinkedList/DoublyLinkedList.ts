@@ -52,6 +52,28 @@ class DoublyLinkedList {
 
     return poppedNode;
   }
+
+  // 연결 리스트 앞에 있는 노드 제거
+  shift(): Node | undefined {
+    if (!this.head || !this.tail) {
+      return undefined;
+    }
+
+    const shiftedNode = this.head;
+
+    if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      this.head = shiftedNode.next!;
+      this.head.prev = null;
+      shiftedNode.next = null;
+    }
+
+    this.length -= 1;
+
+    return shiftedNode;
+  }
 }
 
 export default DoublyLinkedList;
