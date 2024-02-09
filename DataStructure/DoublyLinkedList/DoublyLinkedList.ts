@@ -193,6 +193,25 @@ class DoublyLinkedList {
 
     return removedNode;
   }
+
+  reverse(): DoublyLinkedList {
+    let current = this.head;
+    let prev = null;
+    let next = null;
+
+    while (current !== null) {
+      next = current.next;
+      current.next = prev;
+      current.prev = next;
+      prev = current;
+      current = next;
+    }
+
+    this.tail = this.head;
+    this.head = prev;
+
+    return this;
+  }
 }
 
 export default DoublyLinkedList;
