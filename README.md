@@ -51,8 +51,8 @@
 | 2/7  | X                                                                                                                         | X              |
 | 2/8  | X                                                                                                                         | X              |
 | 2/9  | [[Stack]](./DataStructure/Stack/Stack.md) [스택](https://www.acmicpc.net/problem/10828)                                   | O              |
-| 2/10 |                                                                                                                           |                |
-| 2/11 |                                                                                                                           |                |
+| 2/10 | X                                                                                                                         | X              |
+| 2/11 | [[Queue]](./DataStructure/Queue/Queue.md) [큐](https://www.acmicpc.net/problem/10845)                                     | O              |
 | 2/12 |                                                                                                                           |                |
 | 2/13 |                                                                                                                           |                |
 | 2/14 |                                                                                                                           |                |
