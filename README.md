@@ -53,13 +53,13 @@
 | 2/9  | [[Stack]](./DataStructure/Stack/Stack.md) [스택](https://www.acmicpc.net/problem/10828)                                   | O              |
 | 2/10 | X                                                                                                                         | X              |
 | 2/11 | [[Queue]](./DataStructure/Queue/Queue.md) [큐](https://www.acmicpc.net/problem/10845)                                     | O              |
-| 2/12 |                                                                                                                           |                |
-| 2/13 |                                                                                                                           |                |
-| 2/14 |                                                                                                                           |                |
-| 2/15 |                                                                                                                           |                |
-| 2/16 |                                                                                                                           |                |
-| 2/17 |                                                                                                                           |                |
-| 2/18 |                                                                                                                           |                |
+| 2/12 | 여행 ✈️                                                                                                                   | X              |
+| 2/13 | 여행 ✈️                                                                                                                   | X              |
+| 2/14 | 여행 ✈️                                                                                                                   | X              |
+| 2/15 | 여행 ✈️                                                                                                                   | X              |
+| 2/16 | 여행 ✈️                                                                                                                   | X              |
+| 2/17 | X                                                                                                                         | X              |
+| 2/18 | [[Stack]](./DataStructure/Stack/Stack.md) [괄호](https://www.acmicpc.net/problem/9012)                                    | O              |
 | 2/19 |                                                                                                                           |                |
 | 2/20 |                                                                                                                           |                |
 | 2/21 |                                                                                                                           |                |
