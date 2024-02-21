@@ -60,9 +60,9 @@
 | 2/16 | 여행 ✈️                                                                                                                   | X              |
 | 2/17 | X                                                                                                                         | X              |
 | 2/18 | [[Stack]](./DataStructure/Stack/Stack.md) [괄호](https://www.acmicpc.net/problem/9012)                                    | O              |
-| 2/19 |                                                                                                                           |                |
-| 2/20 |                                                                                                                           |                |
-| 2/21 |                                                                                                                           |                |
+| 2/19 | X                                                                                                                         | X              |
+| 2/20 | X                                                                                                                         | X              |
+| 2/21 | [[Queue]](./DataStructure/Queue/Queue.md) [요세푸스 문제](https://www.acmicpc.net/problem/1158)                           | O              |
 | 2/22 |                                                                                                                           |                |
 | 2/23 |                                                                                                                           |                |
 | 2/24 |                                                                                                                           |                |
