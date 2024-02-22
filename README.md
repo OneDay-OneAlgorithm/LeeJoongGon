@@ -63,7 +63,7 @@
 | 2/19 | X                                                                                                                         | X              |
 | 2/20 | X                                                                                                                         | X              |
 | 2/21 | [[Queue]](./DataStructure/Queue/Queue.md) [요세푸스 문제](https://www.acmicpc.net/problem/1158)                           | O              |
-| 2/22 |                                                                                                                           |                |
+| 2/22 | [[Queue]](./DataStructure/Queue/Queue.md) [프린터 큐](https://www.acmicpc.net/problem/1966)                               | O              |
 | 2/23 |                                                                                                                           |                |
 | 2/24 |                                                                                                                           |                |
 | 2/25 |                                                                                                                           |                |
