@@ -64,10 +64,10 @@
 | 2/20 | X                                                                                                                         | X              |
 | 2/21 | [[Queue]](./DataStructure/Queue/Queue.md) [요세푸스 문제](https://www.acmicpc.net/problem/1158)                           | O              |
 | 2/22 | [[Queue]](./DataStructure/Queue/Queue.md) [프린터 큐](https://www.acmicpc.net/problem/1966)                               | O              |
-| 2/23 |                                                                                                                           |                |
-| 2/24 |                                                                                                                           |                |
-| 2/25 |                                                                                                                           |                |
-| 2/26 |                                                                                                                           |                |
-| 2/27 |                                                                                                                           |                |
-| 2/28 |                                                                                                                           |                |
-| 2/29 |                                                                                                                           |                |
+| 2/23 | X                                                                                                                         | X              |
+| 2/24 | X                                                                                                                         | X              |
+| 2/25 | X                                                                                                                         | X              |
+| 2/26 | X                                                                                                                         | X              |
+| 2/27 | X                                                                                                                         | X              |
+| 2/28 | X                                                                                                                         | X              |
+| 2/29 | X                                                                                                                         | X              |
