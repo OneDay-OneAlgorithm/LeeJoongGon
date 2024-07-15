@@ -120,4 +120,6 @@ class BinarySearchTree {
 ---
 
 - 삽입(Insertion) - O(lg n)
+  - 최악의 경우(이미 정렬된 숫자들이 입력으로 들어오는 경우) - O(n)
 - 검색(Searching) - O(lg n)
+  - 최악의 경우(이미 정렬된 숫자들이 입력으로 들어오는 경우) - O(n)
