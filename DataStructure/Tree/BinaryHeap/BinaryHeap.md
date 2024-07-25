@@ -113,3 +113,11 @@ class MaxBinaryHeap {
 
 export default MaxBinaryHeap;
 ```
+
+## 시간 복잡도
+
+---
+
+- Insertion - O(lg n)
+- Extract Max/Min - O(lg n)
+- Search - O(n)
