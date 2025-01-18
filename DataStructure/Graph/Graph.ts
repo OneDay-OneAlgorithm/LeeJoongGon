@@ -38,6 +38,78 @@ class Graph {
       );
     }
   }
+
+  dfsRecursive(start: string) {
+    const result: string[] = [];
+    const visited: {
+      [key: string]: boolean;
+    } = {};
+
+    const dfs = (vertex: string) => {
+      visited[vertex] = true;
+      result.push(vertex);
+
+      const adjacencyVertices = this.adjacencyList.get(vertex);
+      if (adjacencyVertices) {
+        adjacencyVertices.forEach((adjacencyVertex) => {
+          if (!visited[adjacencyVertex]) {
+            dfs(adjacencyVertex);
+          }
+        });
+      }
+    };
+
+    dfs(start);
+
+    return result;
+  }
+
+  dfsIterative(start: string) {
+    const result: string[] = [];
+    const visited: {
+      [key: string]: boolean;
+    } = {};
+
+    const stack: string[] = [];
+    stack.push(start);
+    visited[start] = true;
+
+    while (stack.length > 0) {
+      const vertex = stack.pop()!;
+      result.push(vertex);
+
+      const adjacencyVertices = this.adjacencyList.get(vertex);
+      if (adjacencyVertices) {
+        adjacencyVertices.forEach((adjacencyVertex) => {
+          if (!visited[adjacencyVertex]) {
+            stack.push(adjacencyVertex);
+            visited[adjacencyVertex] = true;
+          }
+        });
+      }
+    }
+
+    return result;
+  }
 }
 
 export default Graph;
+
+const graph = new Graph();
+graph.addVertex('A');
+graph.addVertex('B');
+graph.addVertex('C');
+graph.addVertex('D');
+graph.addVertex('E');
+graph.addVertex('F');
+
+graph.addEdge('A', 'B');
+graph.addEdge('A', 'C');
+graph.addEdge('B', 'D');
+graph.addEdge('C', 'E');
+graph.addEdge('D', 'E');
+graph.addEdge('D', 'F');
+graph.addEdge('E', 'F');
+
+console.log(graph.dfsRecursive('A')); // ['A', 'B', 'D', 'E', 'C', 'F']
+console.log(graph.dfsIterative('A')); // ['A', 'C', 'E', 'F', 'D', 'B']
