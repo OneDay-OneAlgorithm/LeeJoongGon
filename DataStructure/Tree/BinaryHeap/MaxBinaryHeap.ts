@@ -23,18 +23,18 @@ class MaxBinaryHeap {
   }
 
   #bubbleUp() {
-    let targetIndex = this.values.length - 1;
+    let currentIndex = this.values.length - 1;
 
-    while (targetIndex > 0) {
-      const parentIndex = Math.floor((targetIndex - 1) / 2);
+    while (currentIndex > 0) {
+      const parentIndex = Math.floor((currentIndex - 1) / 2);
 
-      if (this.values[targetIndex] > this.values[parentIndex]) {
-        [this.values[targetIndex], this.values[parentIndex]] = [
+      if (this.values[parentIndex] < this.values[currentIndex]) {
+        [this.values[parentIndex], this.values[currentIndex]] = [
+          this.values[currentIndex],
           this.values[parentIndex],
-          this.values[targetIndex],
         ];
 
-        targetIndex = parentIndex;
+        currentIndex = parentIndex;
       } else {
         break;
       }
@@ -47,9 +47,10 @@ class MaxBinaryHeap {
     while (true) {
       const leftChildIndex = 2 * parentIndex + 1;
       const rightChildIndex = 2 * parentIndex + 2;
+
       let leftChild;
       let rightChild;
-      let largerChildIndex;
+      let largerChildIndex = null;
 
       if (leftChildIndex < this.values.length) {
         leftChild = this.values[leftChildIndex];
@@ -61,14 +62,14 @@ class MaxBinaryHeap {
       if (rightChildIndex < this.values.length) {
         rightChild = this.values[rightChildIndex];
         if (
-          (!leftChild && rightChild > this.values[parentIndex]) ||
-          (leftChild && rightChild > leftChild)
+          (largerChildIndex === null && rightChild > this.values[parentIndex]) ||
+          (largerChildIndex !== null && rightChild > leftChild!)
         ) {
           largerChildIndex = rightChildIndex;
         }
       }
 
-      if (!largerChildIndex) {
+      if (largerChildIndex === null) {
         break;
       }
 
