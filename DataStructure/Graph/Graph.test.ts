@@ -112,5 +112,28 @@ describe('Graph', () => {
 
       expect(result).toEqual(['A', 'C', 'E', 'F', 'D', 'B']);
     });
+
+    describe('bfsIterative()', () => {
+      test('시작 정점부터 너비 우선 탐색을 수행하여 정점을 반환', () => {
+        graph.addVertex('A');
+        graph.addVertex('B');
+        graph.addVertex('C');
+        graph.addVertex('D');
+        graph.addVertex('E');
+        graph.addVertex('F');
+
+        graph.addEdge('A', 'B');
+        graph.addEdge('A', 'C');
+        graph.addEdge('B', 'D');
+        graph.addEdge('C', 'E');
+        graph.addEdge('D', 'E');
+        graph.addEdge('D', 'F');
+        graph.addEdge('E', 'F');
+
+        const result = graph.bfsIterative('A');
+
+        expect(result).toEqual(['A', 'B', 'C', 'D', 'E', 'F']);
+      });
+    });
   });
 });

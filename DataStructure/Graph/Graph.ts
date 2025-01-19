@@ -91,6 +91,34 @@ class Graph {
 
     return result;
   }
+
+  bfsIterative(start: string) {
+    const result: string[] = [];
+    const visited: {
+      [key: string]: boolean;
+    } = {};
+
+    const queue: string[] = [];
+    queue.push(start);
+    visited[start] = true;
+
+    while (queue.length > 0) {
+      const vertex = queue.shift()!;
+      result.push(vertex);
+
+      const adjacencyVertices = this.adjacencyList.get(vertex);
+      if (adjacencyVertices) {
+        adjacencyVertices.forEach((adjacencyVertex) => {
+          if (!visited[adjacencyVertex]) {
+            queue.push(adjacencyVertex);
+            visited[adjacencyVertex] = true;
+          }
+        });
+      }
+    }
+
+    return result;
+  }
 }
 
 export default Graph;
